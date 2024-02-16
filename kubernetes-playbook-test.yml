@@ -17,7 +17,7 @@
           kind: Deployment
           metadata:
             name: calculator-cpp
-            namespace: calculator
+            namespace: calculator-cpp
           spec:
             replicas: 1  # Update with your desired replica count
             selector:
