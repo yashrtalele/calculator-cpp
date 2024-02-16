@@ -5,7 +5,7 @@
 
   tasks:
     - name: Check if the deployment already exists
-      shell: kubectl get deployment calculator-app --namespace calculator
+      shell: kubectl get deployment calculator-cpp --namespace calculator-cpp
       ignore_errors: true
       register: deployment_check
 
