@@ -5,7 +5,7 @@
 
   tasks:
     - name: Check if the deployment already exists
-      shell: kubectl get deployment calculator-cpp --namespace calculator-cpp
+      shell: kubectl get deployment calculator-cpp --namespace calculator
       ignore_errors: true
       register: deployment_check
 
@@ -17,7 +17,7 @@
           kind: Deployment
           metadata:
             name: calculator-cpp
-            namespace: calculator-cpp
+            namespace: calculator
           spec:
             replicas: 1  # Update with your desired replica count
             selector:
@@ -26,7 +26,7 @@
             template:
               metadata:
                 labels:
-                  app: calculator
+                  app: calculator-cpp
               spec:
                 containers:
                 - name: calculator
