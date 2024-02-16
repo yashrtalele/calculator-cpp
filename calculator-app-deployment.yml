@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: yashrtalele/calculator
+        image: yashrtalele/calculator_cpp
         imagePullPolicy: Always
         tty: true
         stdin: true
