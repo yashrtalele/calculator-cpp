@@ -2,6 +2,10 @@
   hosts: localhost
 
   tasks:
+    - name: Delete build directory
+      command: rm -rf build
+    - name: Create build directory
+      command: mkdir build
     - name: Build Docker Image
       command: docker build -t calculator .
       args:
